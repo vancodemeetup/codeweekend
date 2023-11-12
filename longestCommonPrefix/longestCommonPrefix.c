@@ -7,8 +7,6 @@ char* longestCommonPrefix (char** strs, int strsSize)
   // returning a static is not good - but good enough for leetcode?
   static char prefix [200 + 1];
 
-  memset (prefix, 0x00, sizeof (prefix));
-
   if (strsSize == 0) {
     // no strings in list, return empty prefix
     return prefix;
@@ -28,6 +26,7 @@ char* longestCommonPrefix (char** strs, int strsSize)
       if (c != strs [j] [i]) {
         // done or different character, return what was collected in
         // prefix until this point
+        prefix [i] = '\0';
         return prefix;
       }
     }
@@ -35,6 +34,7 @@ char* longestCommonPrefix (char** strs, int strsSize)
     i++;
   } while (c != '\0');
 
+  prefix [i] = '\0';
   return prefix;
 }
 
