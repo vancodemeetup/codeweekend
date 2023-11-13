@@ -4,6 +4,8 @@
 
 char* longestCommonPrefix (char** strs, int strsSize)
 {
+  // max 200 character string length as per problem statement, add one
+  // for trailing '\0'
   // returning a static is not good - but good enough for leetcode?
   static char prefix [200 + 1];
 
@@ -11,9 +13,6 @@ char* longestCommonPrefix (char** strs, int strsSize)
     // no strings in list, return empty prefix
     return prefix;
   }
-
-  // max 200 character string length as per problem statement, add one
-  // for trailing '\0'
 
   size_t i = 0;
   char c;
