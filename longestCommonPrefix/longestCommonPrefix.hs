@@ -14,7 +14,7 @@ firstCharsEqual strs =
   let firstChars = map head strs
   in if not (any null strs) &&
           (and $ zipWith (==) firstChars (tail firstChars)) then
-         -- are all first characters equal
+         -- all first characters are equal
          Just (head firstChars)
        else
          -- one input string is empty or one character differs
