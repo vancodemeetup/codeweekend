@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+/* https://leetcode.com/problems/longest-common-prefix/description/ */
 
 char* longestCommonPrefix (char** strs, int strsSize)
 {

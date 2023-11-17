@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdint>
 
+// https://leetcode.com/problems/remove-letter-to-equalize-frequency/
 
 bool equalFrequency (std::string word)
 {

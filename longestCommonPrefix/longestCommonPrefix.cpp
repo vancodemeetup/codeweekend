@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// https://leetcode.com/problems/longest-common-prefix/description/
+
 std::string longestCommonPrefix (std::vector<std::string> &strs)
 {
   std::string prefix;
