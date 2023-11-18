@@ -1,0 +1,2 @@
+all:
+	./word-frequency.sh
