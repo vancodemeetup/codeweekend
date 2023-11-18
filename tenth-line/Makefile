@@ -1,0 +1,2 @@
+all:
+	./tenth-line.sh
