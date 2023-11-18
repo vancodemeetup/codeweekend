@@ -36,17 +36,16 @@ std::vector<std::vector<int>> subsetsWithDup (std::vector<int> &nums)
 int main ()
 {
   std::vector<int> test =
-    {4,4,4,1,4};
-    // {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18};
+    {1, 2, 3, 4, 5, 6, 5, 5, 2, 1};
 
   const auto r = subsetsWithDup (test);
   std::cout << "r size: " << r.size () << std::endl;
-  // for (const auto &l : r) {
-  //   for (const auto &i : l) {
-  //     std::cout << " [" << i << "]";
-  //   }
-  //   std::cout << std::endl;
-  // }
+  for (const auto &l : r) {
+    for (const auto &i : l) {
+      std::cout << " [" << i << "]";
+    }
+    std::cout << std::endl;
+  }
 
   return 0;
 }
