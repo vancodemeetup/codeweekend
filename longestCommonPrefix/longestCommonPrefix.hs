@@ -1,6 +1,6 @@
 module Main where
 
--- https://leetcode.com/problems/longest-common-prefix/description/
+-- https://leetcode.com/problems/longest-common-prefix
 
 strs1 = ["flower", "flow", "flight"]
 strs2 = ["dog", "racecar", "car"]

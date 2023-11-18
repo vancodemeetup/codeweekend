@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-// https://leetcode.com/problems/valid-number/
+// https://leetcode.com/problems/valid-number
 
 bool isNumber (std::string s)
 {

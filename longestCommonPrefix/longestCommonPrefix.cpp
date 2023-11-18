@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-// https://leetcode.com/problems/longest-common-prefix/description/
+// https://leetcode.com/problems/longest-common-prefix
 
 std::string longestCommonPrefix (std::vector<std::string> &strs)
 {
