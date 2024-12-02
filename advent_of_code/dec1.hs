@@ -1,3 +1,4 @@
+{-# LANGUAGE TupleSections #-}
 module Main where
 
 import Data.List
@@ -16,7 +17,7 @@ main = do
   print . sum $ zipWith ( \ a b -> abs (a - b) ) sla slb
 
   -- was distracted by a movie, didn't notice part 2
-  let lmb = foldr (flip M.insert 0) M.empty la
+  let lmb = M.fromList $ map (, 0) la
       lmb' = foldr ( \ b m -> M.insert (head b) (length b) m ) lmb $ group slb
 
   -- part 2
