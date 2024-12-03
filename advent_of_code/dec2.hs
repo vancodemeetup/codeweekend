@@ -5,12 +5,11 @@ import Data.List
 diff :: [Int] -> [Int]
 diff l = zipWith (-) l (tail l)
 
-bounded, boundedNeg :: Int -> Bool
-bounded x = 1 <= x && x <= 3
-boundedNeg x = -3 <= x && x <= -1
+bounded :: Int -> Int -> Int -> Bool
+bounded lower upper x = lower <= x && x <= upper
 
 allBounded :: [Int] -> Bool
-allBounded l = all bounded l || all boundedNeg l
+allBounded l = all (bounded 1 3) l || all (bounded (-3) (-1)) l
 
 allBoundedDrop :: [Int] -> Bool
 allBoundedDrop l =
