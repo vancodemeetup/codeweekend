@@ -10,7 +10,7 @@ check dropped (x:xs@(x':_)) =
     GT -> checkDiffs dropped (-3, -1) x xs || (not dropped && check True xs)
 
 checkDiffs :: Bool -> (Int, Int) -> Int -> [Int] -> Bool
-checkDiffs _                                 _ _ [] = True
+checkDiffs       _                           _ _      [] = True
 checkDiffs dropped bs@(lowerBound, upperBound) x (x':xs) =
   let diff = x' - x
       inBounds = lowerBound <= diff && diff <= upperBound
