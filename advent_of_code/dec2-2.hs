@@ -3,11 +3,15 @@ module Main where
 check :: Bool -> [Int] -> Bool
 check _ [] = True
 check _ [_] = True
-check dropped (x:xs@(x':_)) =
+check dropped (x:xs@(x':xs')) =
   case compare x x' of
-    EQ -> not dropped && check True xs
-    LT -> checkDiffs dropped ( 1,  3) x xs || (not dropped && check True xs)
-    GT -> checkDiffs dropped (-3, -1) x xs || (not dropped && check True xs)
+    EQ -> not dropped && check True xs                -- drop first x
+    LT -> checkDiffs dropped ( 1,  3) x xs            -- drop none
+          || (not dropped && (check True xs           -- drop first x
+                              || check True (x:xs'))) -- drop second x'
+    GT -> checkDiffs dropped (-3, -1) x xs            -- drop none
+          || (not dropped && (check True xs           -- drop first x
+                              || check True (x:xs'))) -- drop second x'
 
 checkDiffs :: Bool -> (Int, Int) -> Int -> [Int] -> Bool
 checkDiffs       _                           _ _      [] = True
@@ -24,5 +28,5 @@ main = do
   -- part 1
   print . length $ filter (check True) input
 
-  -- part 2, two-pass without generating all input lists
+  -- part 2, three-pass without generating all input lists
   print . length $ filter (check False) input
