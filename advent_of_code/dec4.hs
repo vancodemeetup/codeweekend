@@ -7,7 +7,7 @@ type Board = Array Int (Array Int Char)
 check :: Board -> Int ->  Int -> String
       -> Int -> Int -> Int -> Int -> Bool
 check board w h str x dx y dy =
-  and [ check' c nx ny | (c, nx, ny) <- zip3 str [x, x + dx ..] [y, y + dy ..] ]
+  and $ zipWith3 check' str [x, x + dx ..] [y, y + dy ..]
   where check' c nx ny
           | 1 <= nx && nx <= w &&
             1 <= ny && ny <= h = c == board ! nx ! ny

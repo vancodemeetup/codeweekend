@@ -7,3 +7,6 @@ all:
 
 	@echo "\nDec 3rd"
 	runghc dec3.hs
+
+	@echo "\nDec 4th"
+	runghc dec4.hs
