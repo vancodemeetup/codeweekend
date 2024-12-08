@@ -10,3 +10,9 @@ all:
 
 	@echo "\nDec 4th"
 	runghc dec4.hs
+
+	@echo "\nDec 5th"
+	runghc dec5.hs
+
+	@echo "\nDec 7th"
+	runghc dec7.hs
