@@ -16,3 +16,6 @@ all:
 
 	@echo "\nDec 7th"
 	runghc dec7.hs
+
+	@echo "\nDec 8th"
+	runghc dec8.hs
