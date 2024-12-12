@@ -44,7 +44,7 @@ lengthBlink level is =
 
 main :: IO ()
 main = do
-  input <- (read <$>) .  words <$> readFile "dec11.txt"
+  input <- (read <$>) . words <$> readFile "dec11.txt"
 
   -- part 1
   print . length $ blinkN 25 input
